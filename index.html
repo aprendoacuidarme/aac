@@ -120,6 +120,101 @@
             margin-bottom: 10px;
         }
 
+        .slide-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .slide {
+            scroll-snap-align: start;
+            flex: 0 0 100%;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .slide img {
+            max-width: 40%;
+            border-radius: 10px;
+        }
+
+        .slide p {
+            width: 55%;
+        }
+
+        .slide .textbox {
+            width: 45%;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide .textbox h3 {
+            color: #ff616f;
+        }
+
+        .testimony-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .testimony {
+            padding: 20px;
+            background-color: #f8f9fa;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .testimony:nth-child(1) {
+            border-color: #4CAF50;
+        }
+
+        .testimony:nth-child(2) {
+            border-color: #2196F3;
+        }
+
+        .testimony:nth-child(3) {
+            border-color: #FFC107;
+        }
+
+        .testimony:nth-child(4) {
+            border-color: #9C27B0;
+        }
+
+        .testimony:nth-child(5) {
+            border-color: #FF5722;
+        }
+
+        .testimony h3 {
+            color: #333;
+        }
+
+        .testimony p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .slide-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .slide-button:hover {
+            background-color: #45a049;
+        }
+
         /* Responsive styles */
         @media (max-width: 600px) {
             nav {
@@ -129,13 +224,178 @@
             nav a {
                 padding: 10px;
             }
+
+            .slide p {
+                width: 100%;
+            }
+
+            .slide .textbox {
+                width: 100%;
+            }
+
+            .testimony-container {
+                grid-template-columns: 1fr;
+            }
         }
+      .content {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .slide img {
+            max-width: 40%;
+            max-height: 150px;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+        }
+        .buttons button#prevBtn {
+            display: none; /* Ocultar el botón "Anterior" inicialmente */
+        }
+
+        /* Estilos específicos para la sección "quienes-somos" */
+        
+        #quienes-somos h2 {
+            color: #007BFF;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        #quienes-somos p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        /*yo decidí esperar*/
+.unique-slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 40%; /* Reducing the width to 80% to make images smaller */
+    margin: 0 auto;
+}
+
+.unique-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.unique-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.unique-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.unique-prev-btn, .unique-next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.unique-prev-btn {
+    left: 10px;
+}
+
+.unique-next-btn {
+    right: 10px;
+}
+
+        /*yo decidí esperar*/
+/* slide grande*/
+/* Slider con imágenes grandes */
+.unique-slider-container-large {
+    position: relative;
+    overflow: hidden;
+    width: 40%; /* Mantener el ancho al 100% para mantener el tamaño original de las imágenes */
+    margin: 0 auto;
+}
+
+.unique-slider-large {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.unique-slide-large {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.unique-slide-large img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.unique-prev-btn-large, .unique-next-btn-large {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.unique-prev-btn-large {
+    left: 10px;
+}
+
+.unique-next-btn-large {
+    right: 10px;
+}
+/*slide grande */
     </style>
 </head>
 <body>
 
 <header>
-    <img src="https://c0.klipartz.com/pngpicture/446/556/gratis-png-ilustracion-de-la-mujer-embarazada-embarazo-parto-cirugia-de-la-mujer-infantil-mujeres-embarazadas-pintadas-a-mano.png" alt="Logo" class="logo" width="100">
+    <img src="https://i.ibb.co/sWpBww2/logo.png" alt="Logo" class="logo" width="150">
     <h1>Aprende a cuidarte</h1>
 </header>
 
@@ -143,9 +403,11 @@
     <a href="#inicio">Inicio</a>
     <a href="#quienes-somos">¿Quiénes somos?</a>
     <a href="#preguntas-respuestas">Preguntas y respuestas</a>
+    <a href="#he-decidido-esperar">He decidido esperar</a>
     <a href="#protegerse">¿Cómo protegerme del embarazo adolescente?</a>
     <a href="#testimonios">Testimonios</a>
     <a href="#enlaces-interes">Enlaces de interés</a>
+    <a href="#comentarios">Comentarios</a>
 </nav>
 
 <section id="inicio">
@@ -180,22 +442,92 @@
         <h3>Noticias recientes sobre el embarazo adolescente en el Perú</h3>
         <p>En los últimos años, Perú ha visto un aumento en los esfuerzos para reducir el embarazo adolescente a través de campañas de educación y acceso a servicios de salud. Algunas noticias recientes incluyen:</p>
         <ul>
-            <li><a href="https://www.elcomercio.pe/peru/embarazo-adolescente-en-peru-cifras-y-medidas-para-reducirlo-noticia/" target="_blank">El Comercio - Embarazo adolescente en Perú: cifras y medidas para reducirlo</a></li>
-            <li><a href="https://rpp.pe/peru/actualidad/gobierno-lanza-campana-para-prevenir-embarazos-adolescentes-noticia-1382764" target="_blank">RPP - Gobierno lanza campaña para prevenir embarazos adolescentes</a></li>
-            <li><a href="https://andina.pe/agencia/noticia-minsa-implementa-estrategias-para-reducir-embarazo-adolescente-en-peru-860330.aspx" target="_blank">Andina - Minsa implementa estrategias para reducir embarazo adolescente en Perú</a></li>
+            <li><a href="https://www.elcomercio.pe/peru/embarazo-adolescente-incluidas-embarazadas-noticia-816771/" target="_blank">"Incluidas Embarazadas": una campaña para apoyar a las adolescentes embarazadas en el Perú.</a></li>
+            <li><a href="https://larepublica.pe/sociedad/2023/01/12/educacion-peru-informe-sobre-embarazo-adolescente-en-el-peru-ultimas-noticias-hoy/" target="_blank">Informe sobre embarazo adolescente en el Perú: últimas noticias.</a></li>
         </ul>
-
-        <h3>Otros recursos</h3>
-        <p>Además de la información anterior, nuestra página incluye recursos educativos, testimonios y enlaces a organizaciones que pueden proporcionar apoyo adicional. Nuestro objetivo es brindar un espacio seguro y educativo para todos los adolescentes que buscan información sobre salud sexual y reproductiva.</p>
     </div>
 </section>
 
 <section id="quienes-somos">
     <div class="content">
-        <h2>¿Quiénes somos?</h2>
-        <p>Somos estudiantes de la Institución Educativa César Cohaila Tamayo de Ciudad Nueva de Tacna. Hemos creado esta página con motivo del incremento de los casos de embarazo adolescente que se vienen dando en la ciudad. Este es un espacio donde encontrarás mucha información relevante sobre cómo prevenir el embarazo adolescente, la importancia de la educación sexual, y los recursos disponibles para los adolescentes.</p>
-        <p>Trabajamos en colaboración con profesionales de la salud y organizaciones dedicadas a la educación sexual para asegurar que la información que brindamos sea precisa y útil. Creemos firmemente que la educación es la clave para prevenir el embarazo adolescente y mejorar la calidad de vida de los jóvenes en nuestra comunidad.</p>
+<div class="slider">
+    <div class="slides">
+        <div class="slide">
+            <img src="https://i.ibb.co/xDJkjJC/Sin-t-tulo-3.png" alt="Pregunta Nombre">
+            <div>
+                <p>¿Cuál es tu nombre?</p>
+                <input type="text" id="nameInput" placeholder="Ingresa tu nombre">
+                <button onclick="greetUser()">Enviar</button>
+                <p id="greeting"></p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://i.ibb.co/30XnK1X/Sin-t-tulo-2.png" alt="Imagen 1">
+            <div>
+                <p>Somos estudiantes de la Institución Educativa César Cohaila Tamayo de Ciudad Nueva de Tacna. Esta página fue creada debido al aumento de casos de embarazo adolescente en nuestra ciudad.</p>
+                <p>Aquí encontrarás información relevante sobre la prevención del embarazo adolescente, la importancia de la educación sexual y los recursos disponibles. La prevención es crucial para que los jóvenes completen su educación, desarrollen habilidades y alcancen su máximo potencial.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://i.ibb.co/FbpwWf1/Sin-t-tulo-1.png" alt="Imagen 2">
+            <div>
+                <p>No promovemos las relaciones sexuales a temprana edad; nuestro enfoque es proporcionar estrategias efectivas para prevenir embarazos no deseados y fomentar decisiones informadas. La educación y la concienciación son herramientas poderosas para empoderar a los jóvenes.</p>
+                <p>Buscamos información de fuentes confiables para asegurar que sea precisa y útil. Creemos que la educación es clave para prevenir el embarazo adolescente y mejorar la calidad de vida en nuestra comunidad.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://i.ibb.co/8jPYf3r/Sin-t-tulo-5.png" alt="Imagen 3">
+            <div>
+                <p>Proporcionamos herramientas prácticas y recursos accesibles para que los adolescentes tomen decisiones informadas sobre su salud reproductiva, en un entorno de apoyo donde se sientan cómodos para hacer preguntas y buscar ayuda.</p>
+                <p>Te invitamos a explorar nuestra información y recursos para prevenir el embarazo adolescente. Juntos, podemos promover la educación sexual y decisiones responsables, construyendo un futuro más saludable para nuestra comunidad. ¡Infórmate, participa y comparte este conocimiento!</p>
+            </div>
+        </div>
     </div>
+</div>
+
+<div class="buttons">
+    <button id="prevBtn" onclick="prevSlide()">Anterior</button>
+    <button id="nextBtn" onclick="nextSlide()">Siguiente</button>
+</div>
+
+<script>
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+        if (index >= totalSlides) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = totalSlides - 1;
+        } else {
+            currentSlide = index;
+        }
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        updateButtons();
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    function updateButtons() {
+        const totalSlides = document.querySelectorAll('.slide').length;
+        document.getElementById('prevBtn').style.display = currentSlide === 0 ? 'none' : 'inline-block';
+        document.getElementById('nextBtn').textContent = currentSlide === totalSlides - 1 ? 'Regresar' : 'Siguiente';
+    }
+
+    function greetUser() {
+        const name = document.getElementById('nameInput').value;
+        document.getElementById('greeting').textContent = `Hola, ${name}, bienvenido a nuestra página`;
+    }
+
+    showSlide(currentSlide);
+</script>
 </section>
 
 <section id="preguntas-respuestas">
@@ -204,127 +536,370 @@
         <p>Aquí puedes encontrar respuestas a las preguntas más frecuentes sobre la salud sexual y reproductiva.</p>
         
         <h3>Preguntas frecuentes sobre el embarazo adolescente</h3>
-        <div class="faq">
-            <div class="faq-question">¿Qué es el embarazo adolescente?</div>
-            <div class="faq-answer">El embarazo adolescente se refiere a la concepción ocurrida en jóvenes menores de 20 años. Es un problema que puede tener consecuencias significativas tanto para la madre como para el bebé.</div>
-            
-            <div class="faq-question">¿Cuáles son las causas del embarazo adolescente?</div>
-            <div class="faq-answer">Las causas incluyen la falta de educación sexual, acceso limitado a métodos anticonceptivos, presión social, entornos familiares disfuncionales y violencia sexual.</div>
-
-            <div class="faq-question">¿Qué consecuencias tiene el embarazo adolescente?</div>
-            <div class="faq-answer">Las consecuencias pueden incluir la interrupción de la educación, oportunidades laborales limitadas, problemas de salud para la madre y el bebé, pobreza y problemas psicológicos.</div>
-
-            <div class="faq-question">¿Cómo puedo prevenir el embarazo adolescente?</div>
-            <div class="faq-answer">La prevención incluye el uso de métodos anticonceptivos, la educación sexual integral, el acceso a servicios de salud y la comunicación abierta con la pareja y la familia.</div>
-
-            <div class="faq-question">¿Dónde puedo obtener métodos anticonceptivos?</div>
-            <div class="faq-answer">Puedes obtener métodos anticonceptivos en centros de salud, farmacias y organizaciones especializadas en salud reproductiva.</div>
-
-            <div class="faq-question">¿Qué debo hacer si creo que estoy embarazada?</div>
-            <div class="faq-answer">Debes consultar a un profesional de la salud para confirmar el embarazo y recibir orientación adecuada.</div>
-
-            <div class="faq-question">¿Qué tipos de métodos anticonceptivos existen?</div>
-            <div class="faq-answer">Existen varios métodos anticonceptivos, incluyendo condones, píldoras, implantes y dispositivos intrauterinos (DIU).</div>
-
-            <div class="faq-question">¿Son seguros los métodos anticonceptivos?</div>
-            <div class="faq-answer">Sí, los métodos anticonceptivos son seguros y efectivos cuando se usan correctamente.</div>
-
-            <div class="faq-question">¿Qué es la educación sexual integral?</div>
-            <div class="faq-answer">Es un enfoque educativo que proporciona información sobre la sexualidad, la salud reproductiva, las relaciones y los derechos sexuales.</div>
-
-            <div class="faq-question">¿Cómo puedo hablar con mis padres sobre sexo?</div>
-            <div class="faq-answer">Es importante ser honesto y claro. Escoge un momento tranquilo para expresar tus inquietudes y preguntas.</div>
-
-            <div class="faq-question">¿Qué debo hacer si he tenido sexo sin protección?</div>
-            <div class="faq-answer">Consulta a un profesional de la salud para discutir opciones como la píldora de emergencia.</div>
-
-            <div class="faq-question">¿Cuáles son los riesgos de tener un hijo durante la adolescencia?</div>
-            <div class="faq-answer">Los riesgos incluyen problemas de salud para la madre y el bebé, así como desafíos económicos y sociales.</div>
-
-            <div class="faq-question">¿Qué apoyo está disponible para adolescentes embarazadas?</div>
-            <div class="faq-answer">Hay servicios de salud, consejería y organizaciones de apoyo disponibles para adolescentes embarazadas.</div>
-
-            <div class="faq-question">¿Es posible continuar la educación estando embarazada?</div>
-            <div class="faq-answer">Sí, existen programas y recursos para ayudar a las adolescentes embarazadas a continuar su educación.</div>
-
-            <div class="faq-question">¿Qué es el consentimiento en las relaciones sexuales?</div>
-            <div class="faq-answer">El consentimiento es el acuerdo libre y voluntario de participar en una actividad sexual.</div>
-
-            <div class="faq-question">¿Qué debo saber sobre las ITS?</div>
-            <div class="faq-answer">Las infecciones de transmisión sexual (ITS) pueden prevenirse con el uso de condones y otros métodos de protección.</div>
-
-            <div class="faq-question">¿Dónde puedo hacerme pruebas de ITS?</div>
-            <div class="faq-answer">Puedes hacerte pruebas de ITS en centros de salud, clínicas y organizaciones especializadas.</div>
-
-            <div class="faq-question">¿Qué hago si soy víctima de violencia sexual?</div>
-            <div class="faq-answer">Busca apoyo inmediato de un profesional de la salud o una organización de apoyo, y considera reportarlo a las autoridades.</div>
-
-            <div class="faq-question">¿Cómo puedo apoyar a un amigo que está embarazado?</div>
-            <div class="faq-answer">Brinda apoyo emocional, acompáñalo a citas médicas y ayúdalo a buscar recursos y servicios de apoyo.</div>
-
-            <div class="faq-question">¿Qué derechos tienen los adolescentes en cuanto a salud sexual?</div>
-            <div class="faq-answer">Tienen derecho a recibir información precisa, acceso a servicios de salud y protección contra la violencia y el abuso.</div>
+            <div class="faq-question" onclick="toggleAnswer(1)">
+        <h3>¿Qué es el embarazo adolescente?</h3>
+        <div class="faq-answer" id="answer1">
+            <p>El embarazo adolescente se refiere a embarazos en mujeres menores de 20 años. Es un tema de preocupación debido a las implicaciones sociales, económicas y de salud que puede tener tanto para la madre como para el bebé.</p>
         </div>
     </div>
-</section>
 
+    <div class="faq-question" onclick="toggleAnswer(2)">
+        <h3>¿Cuáles son las causas del embarazo adolescente?</h3>
+        <div class="faq-answer" id="answer2">
+            <p>Las causas pueden ser diversas e incluyen falta de educación sexual adecuada, acceso limitado a métodos anticonceptivos, presión social o de pareja, entre otros factores socioeconómicos y culturales.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(3)">
+        <h3>¿Cómo afecta el embarazo adolescente a la vida de una joven?</h3>
+        <div class="faq-answer" id="answer3">
+            <p>El embarazo adolescente puede afectar profundamente la vida de una joven, interrumpiendo su educación, limitando oportunidades laborales futuras y generando impactos emocionales y sociales significativos.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(4)">
+        <h3>¿Qué hacer si soy adolescente y creo estar embarazada?</h3>
+        <div class="faq-answer" id="answer4">
+            <p>Es importante buscar apoyo médico y emocional lo antes posible. Consulta con un profesional de la salud para recibir atención prenatal adecuada y considera hablar con un consejero para explorar todas tus opciones.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(5)">
+        <h3>¿Cómo puedo prevenir el embarazo adolescente?</h3>
+        <div class="faq-answer" id="answer5">
+            <p>La prevención del embarazo adolescente incluye educación sexual integral, acceso a métodos anticonceptivos, empoderamiento de las jóvenes para tomar decisiones informadas y apoyo de la comunidad y la familia.</p>
+        </div>
+    </div>
+    
+    <div class="faq-question" onclick="toggleAnswer(6)">
+        <h3>¿Qué consecuencias tiene el embarazo adolescente?</h3>
+        <div class="faq-answer" id="answer6">
+            <p>Las consecuencias pueden incluir la interrupción de la educación, oportunidades laborales limitadas, problemas de salud para la madre y el bebé, pobreza y problemas psicológicos.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(7)">
+        <h3>¿Dónde puedo obtener métodos anticonceptivos?</h3>
+        <div class="faq-answer" id="answer7">
+            <p>Puedes obtener métodos anticonceptivos en centros de salud, farmacias y organizaciones especializadas en salud reproductiva.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(8)">
+        <h3>¿Qué debo hacer si creo que estoy embarazada?</h3>
+        <div class="faq-answer" id="answer8">
+            <p>Debes consultar a un profesional de la salud para confirmar el embarazo y recibir orientación adecuada.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(9)">
+        <h3>¿Qué tipos de métodos anticonceptivos existen?</h3>
+        <div class="faq-answer" id="answer9">
+            <p>Existen varios métodos anticonceptivos, incluyendo condones, píldoras, implantes y dispositivos intrauterinos (DIU).</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(10)">
+        <h3>¿Son seguros los métodos anticonceptivos?</h3>
+        <div class="faq-answer" id="answer10">
+            <p>Sí, los métodos anticonceptivos son seguros y efectivos cuando se usan correctamente.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(11)">
+        <h3>¿Qué es la educación sexual integral?</h3>
+        <div class="faq-answer" id="answer11">
+            <p>Es un enfoque educativo que proporciona información sobre la sexualidad, la salud reproductiva, las relaciones y los derechos sexuales.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(12)">
+        <h3>¿Cómo puedo hablar con mis padres sobre sexo?</h3>
+        <div class="faq-answer" id="answer12">
+            <p>Es importante ser honesto y claro. Escoge un momento tranquilo para expresar tus inquietudes y preguntas.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(13)">
+        <h3>¿Qué debo hacer si he tenido sexo sin protección?</h3>
+        <div class="faq-answer" id="answer13">
+            <p>Consulta a un profesional de la salud para discutir opciones como la píldora de emergencia.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(14)">
+        <h3>¿Cuáles son los riesgos de tener un hijo durante la adolescencia?</h3>
+        <div class="faq-answer" id="answer14">
+            <p>Los riesgos incluyen problemas de salud para la madre y el bebé, así como desafíos económicos y sociales.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(15)">
+        <h3>¿Qué apoyo está disponible para adolescentes embarazadas?</h3>
+        <div class="faq-answer" id="answer15">
+            <p>Hay servicios de salud, consejería y organizaciones de apoyo disponibles para adolescentes embarazadas.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(16)">
+        <h3>¿Es posible continuar la educación estando embarazada?</h3>
+        <div class="faq-answer" id="answer16">
+            <p>Sí, existen programas y recursos para ayudar a las adolescentes embarazadas a continuar su educación.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(17)">
+        <h3>¿Qué es el consentimiento en las relaciones sexuales?</h3>
+        <div class="faq-answer" id="answer17">
+            <p>El consentimiento es el acuerdo libre y voluntario de participar en una actividad sexual.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(18)">
+        <h3>¿Qué debo saber sobre las ITS?</h3>
+        <div class="faq-answer" id="answer18">
+            <p>Las infecciones de transmisión sexual (ITS) pueden prevenirse con el uso de condones y otros métodos de protección.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(19)">
+        <h3>¿Dónde puedo hacerme pruebas de ITS?</h3>
+        <div class="faq-answer" id="answer19">
+            <p>Puedes hacerte pruebas de ITS en centros de salud, clínicas y organizaciones especializadas.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(20)">
+        <h3>¿Qué hago si soy víctima de violencia sexual?</h3>
+        <div class="faq-answer" id="answer20">
+            <p>Busca apoyo inmediato de un profesional de la salud o una organización de apoyo, y considera reportarlo a las autoridades.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(21)">
+        <h3>¿Cómo puedo apoyar a un amigo que está embarazado?</h3>
+        <div class="faq-answer" id="answer21">
+            <p>Brinda apoyo emocional, acompáñalo a citas médicas y ayúdalo a buscar recursos y servicios de apoyo.</p>
+        </div>
+    </div>
+
+    <div class="faq-question" onclick="toggleAnswer(22)">
+        <h3>¿Qué derechos tienen los adolescentes en cuanto a salud sexual?</h3>
+        <div class="faq-answer" id="answer22">
+            <p>Tienen derecho a recibir información precisa, acceso a servicios de salud y protección contra la violencia y el abuso.</p>
+        </div>
+    </div>
+</div>
+
+</section>
+<section id="he-decidido-esperar">
+<div class="content">
+        <div style="text-align:center;">
+            <img src="https://i.ibb.co/B61nJcm/Sin-t-tulo-4.png" alt="He Decidido Esperar" style="width:40%; height:auto;">
+        </div>
+        
+        <div style="display: flex; align-items: flex-start; margin-top:20px;">
+            <div style="flex:1; text-align:right; padding-right:10px;">
+                <img src="https://i.ibb.co/zQ9qqdp/OIG2-EWnb-Oj-SD3.png" alt="Esperar" style="width:150px; height:auto; margin-right:20px;">
+            </div>
+
+            <div style="flex:2; text-align:left;">
+                <p>¡Felicidades por tomar la decisión de esperar para tener relaciones sexuales! Es una decisión valiente y responsable que puede tener muchos beneficios positivos para tu vida presente y futura. Aquí te explicamos algunos de esos beneficios y estrategias que puedes seguir para mantener tu compromiso.</p>
+
+                <h2>Beneficios de retrasar el inicio de tener relaciones sexuales en adolescentes</h2>
+                <ul>
+                    <li><p><b>Mejor desarrollo emocional y psicológico:</b> Permite a los adolescentes madurar emocionalmente y desarrollar una comprensión más sólida de sus sentimientos y deseos. Reduce el riesgo de problemas emocionales como depresión y ansiedad relacionados con la actividad sexual temprana.</p></li>
+                    <li><p><b>Reducción del riesgo de embarazo no deseado:</b> Al posponer el inicio de la actividad sexual, se reduce la probabilidad de embarazos no planeados durante la adolescencia.</p></li>
+                    <li><p><b>Menor riesgo de infecciones de transmisión sexual (ITS):</b> Retrasar la actividad sexual disminuye la exposición a ITS y otras complicaciones de salud.</p></li>
+                    <li><p><b>Mejores oportunidades educativas y profesionales:</b> Los adolescentes que retrasan la actividad sexual tienden a enfocarse más en sus estudios y en el desarrollo de habilidades que pueden beneficiar su futuro académico y laboral.</p></li>
+                    <li><p><b>Relaciones más saludables y respetuosas:</b> El tiempo adicional permite a los adolescentes aprender más sobre relaciones saludables y el consentimiento, promoviendo vínculos más respetuosos y equilibrados.</p></li>
+                </ul>
+
+                <h2>Estrategias para que los adolescentes retrasen su iniciación sexual</h2>
+                <ul>
+                    <li><p><b>Educación sexual integral:</b> Proveer información completa y precisa sobre sexualidad, salud reproductiva y relaciones interpersonales. Enfocar la educación en el desarrollo de habilidades para tomar decisiones informadas y responsables.</p></li>
+                    <li><p><b>Fortalecimiento de la autoestima:</b> Fomentar la autoconfianza y el auto-respeto en los adolescentes para que puedan tomar decisiones basadas en sus propios valores y deseos, y no en la presión social.</p></li>
+                    <li><p><b>Establecimiento de metas personales y académicas:</b> Ayudar a los adolescentes a identificar y perseguir sus metas a largo plazo, lo cual puede reducir la probabilidad de involucrarse en conductas de riesgo.</p></li>
+                    <li><p><b>Promoción de actividades extracurriculares:</b> Participar en deportes, clubes y otras actividades organizadas puede ocupar el tiempo libre de los adolescentes de manera positiva y productiva.</p></li>
+                    <li><p><b>Comunicación abierta con padres y adultos de confianza:</b> Fomentar una relación de confianza y comunicación abierta con los padres y otros adultos de referencia para que los adolescentes se sientan cómodos buscando consejo y apoyo.</p></li>
+                    <li><p><b>Modelado de relaciones saludables:</b> Mostrar ejemplos positivos de relaciones respetuosas y amorosas puede influir en la percepción de los adolescentes sobre lo que es una relación saludable.</p></li>
+                    <li><p><b>Acceso a servicios de salud y consejería:</b> Proveer acceso a servicios de salud y consejería donde los adolescentes puedan obtener información y apoyo sobre sus preocupaciones y dudas.</p></li>
+                    <li><p><b>Enseñanza sobre el consentimiento y las relaciones respetuosas:</b> Educar sobre la importancia del consentimiento mutuo y el respeto en todas las relaciones para que los adolescentes comprendan sus derechos y los de los demás.</p></li>
+                </ul>
+
+                <p>Recuerda que esta decisión es una forma de cuidarte y respetar tu propio ritmo y necesidades. ¡Estamos aquí para apoyarte en este camino!</p>
+            </div>
+        </div>
+    </div>
+    <div class="unique-slider-container">
+    <div class="unique-slider">
+        <div class="unique-slide"><img src="https://i.ibb.co/mqYcvsf/1695746654599.jpg" alt="Slide 1"></div>
+        <div class="unique-slide"><img src="https://i.ibb.co/g7N3jMD/307950754-5743800869006103-2289844392323211089-n.jpg" alt="Slide 2"></div>
+        <div class="unique-slide"><img src="https://i.ibb.co/9NbWYWV/359797581-300942249126294-9123078767904803964-n.jpg" alt="Slide 3"></div>
+        <div class="unique-slide"><img src="https://i.ibb.co/ww9t0z3/306272324-5751792328206957-7873221160735759767-n.jpg" alt="Slide 4"></div>
+        <div class="unique-slide"><img src="https://i.ibb.co/3M0fsQc/242431130-4618292234890311-248791669211598152-n.jpg" alt="Slide 5"></div>
+        <div class="unique-slide"><img src="https://i.ibb.co/h7XC68g/98befd56c9ac83570718dfb1423a58eb.jpg" alt="Slide 6"></div>
+        <div class="unique-slide"><img src="https://i.ibb.co/WGLVqHn/119993509-3564814643571414-5603406881940623027-n.jpg" alt="Slide 7"></div>
+        <div class="unique-slide"><img src="https://i.ibb.co/FxHNDHS/a7915ab4-d110-4544-83b8-231504212529.jpg" alt="Slide 8"></div>
+    </div>
+    <button class="unique-prev-btn">&#10094; Previo</button>
+    <button class="unique-next-btn">Siguiente &#10095;</button>
+</div>
+
+    <!-- Aquí puedes agregar más contenido según sea necesario -->
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const uniqueSlider = document.querySelector('.unique-slider');
+    const uniqueSlides = document.querySelectorAll('.unique-slide');
+    const uniquePrevBtn = document.querySelector('.unique-prev-btn');
+    const uniqueNextBtn = document.querySelector('.unique-next-btn');
+    let uniqueSlideIndex = 0;
+
+    function showUniqueSlides() {
+        uniqueSlider.style.transform = `translateX(-${uniqueSlideIndex * 100}%)`;
+    }
+
+    function nextUniqueSlide() {
+        uniqueSlideIndex = (uniqueSlideIndex + 1) % uniqueSlides.length;
+        showUniqueSlides();
+    }
+
+    function prevUniqueSlide() {
+        uniqueSlideIndex = (uniqueSlideIndex - 1 + uniqueSlides.length) % uniqueSlides.length;
+        showUniqueSlides();
+    }
+
+    uniqueNextBtn.addEventListener('click', nextUniqueSlide);
+    uniquePrevBtn.addEventListener('click', prevUniqueSlide);
+
+    showUniqueSlides();
+});
+</script>
+</section>
 <section id="protegerse">
     <div class="content">
         <h2>¿Cómo protegerme del embarazo adolescente?</h2>
-        <p>Existen diversas formas de protegerse del embarazo adolescente, incluyendo el uso de métodos anticonceptivos, la educación sexual integral y el acceso a servicios de salud. Aquí te ofrecemos algunas recomendaciones clave:</p>
+        <p>Protegerte del embarazo adolescente implica tomar decisiones informadas y cuidar de tu salud sexual y reproductiva. Aquí te ofrecemos algunos consejos:</p>
         <ul>
-            <li>Usa métodos anticonceptivos: Existen muchos métodos anticonceptivos efectivos, como condones, píldoras, implantes y dispositivos intrauterinos (DIU).</li>
-            <li>Infórmate: La educación sexual integral es fundamental para entender cómo protegerte y tomar decisiones informadas sobre tu salud sexual y reproductiva.</li>
-            <li>Accede a servicios de salud: Visita a un profesional de la salud para obtener orientación y acceso a métodos anticonceptivos adecuados para ti.</li>
-            <li>Comunicación: Habla con tu pareja sobre tus límites y expectativas. La comunicación abierta y honesta es crucial en cualquier relación.</li>
+            <li>Educación sexual integral: Aprende sobre tu cuerpo, la reproducción y métodos anticonceptivos.</li>
+            <li>Acceso a métodos anticonceptivos: Consulta con un profesional de salud para encontrar el método más adecuado para ti.</li>
+            <li>Comunicación abierta: Habla con tus padres, tutores u otros adultos de confianza sobre temas de sexualidad y salud.</li>
+            <li>Empoderamiento: Toma decisiones que respeten tus valores y metas personales.</li>
+            <li>Apoyo emocional: Busca apoyo si te enfrentas a presiones sociales o emocionales que puedan influir en tus decisiones.</li>
         </ul>
-        <p>Recuerda que protegerte no solo se trata de evitar un embarazo, sino también de cuidar tu salud sexual y emocional. Busca información confiable y no dudes en consultar a un especialista si tienes dudas o inquietudes.</p>
-        <p>Según el documento proporcionado por el Ministerio de Salud, las siguientes estrategias también son fundamentales:</p>
-        <ul>
-            <li>Implementar programas de educación sexual integral en escuelas y comunidades.</li>
-            <li>Asegurar el acceso a servicios de salud amigables para adolescentes.</li>
-            <li>Promover la comunicación entre padres e hijos sobre temas de sexualidad y salud reproductiva.</li>
-            <li>Fomentar la participación de los adolescentes en la toma de decisiones sobre su salud.</li>
-        </ul>
-        <p>Para más información, puedes leer el documento completo del Ministerio de Salud <a href="https://cdn.www.gob.pe/uploads/document/file/2215851/Documento.pdf?v=1632944313" target="_blank">aquí</a>.</p>
+        <p>Métodos Anticonceptivos para Adolescentes que debes conocer</p>
+
+        <p>Vivir la sexualidad de manera plena, responsable, informada y placentera no implica necesariamente la reproducción. Por lo tanto; adolescentes, jóvenes y adultos pueden recurrir al uso de métodos anticonceptivos para prevenir un embarazo no planicado. En situaciones de emergencia se debe garantizar más que nunca el acceso a anticoncepción y condones para evitar embarazos no planeados, así como Infecciones de Transmisión Sexual (ITS), entre ellas el VIH.</p>
     </div>
-</section>
+    <!-- Slider con imágenes grandes -->
+    <div class="unique-slider-container-large">
+    <div class="unique-slider-large">
+        <div class="unique-slide-large"><img src="https://i.ibb.co/Ln04ShV/pildoras.jpg" alt="Slide 1"></div>
+        <div class="unique-slide-large"><img src="https://i.ibb.co/q08fTfX/inyectables.jpg" alt="Slide 2"></div>
+        <div class="unique-slide-large"><img src="https://i.ibb.co/MgGYMMj/implantes.jpg" alt="Slide 3"></div>
+        <div class="unique-slide-large"><img src="https://i.ibb.co/VJX3Qky/emergencia.jpg" alt="Slide 4"></div>
+        <div class="unique-slide-large"><img src="https://i.ibb.co/rspzHmY/diu.jpg" alt="Slide 5"></div>
+        <div class="unique-slide-large"><img src="https://i.ibb.co/PDTTr2C/Condon3.jpg" alt="Slide 6"></div>
+        <div class="unique-slide-large"><img src="https://i.ibb.co/ThYYfYD/Condon.jpg" alt="Slide 7"></div>
+        <div class="unique-slide-large"><img src="https://i.ibb.co/HKzFQGN/Ccondon2.jpg" alt="Slide 8"></div>
+    </div>
+    <button class="unique-prev-btn-large">&#10094; Previo</button>
+    <button class="unique-next-btn-large">Siguiente &#10095;</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Slider con imágenes grandes
+    const uniqueSliderLarge = document.querySelector('.unique-slider-large');
+    const uniqueSlidesLarge = document.querySelectorAll('.unique-slide-large');
+    const uniquePrevBtnLarge = document.querySelector('.unique-prev-btn-large');
+    const uniqueNextBtnLarge = document.querySelector('.unique-next-btn-large');
+    let uniqueSlideIndexLarge = 0;
+
+    function showUniqueSlidesLarge() {
+        uniqueSliderLarge.style.transform = `translateX(-${uniqueSlideIndexLarge * 100}%)`;
+    }
+
+    function nextUniqueSlideLarge() {
+        uniqueSlideIndexLarge = (uniqueSlideIndexLarge + 1) % uniqueSlidesLarge.length;
+        showUniqueSlidesLarge();
+    }
+
+    function prevUniqueSlideLarge() {
+        uniqueSlideIndexLarge = (uniqueSlideIndexLarge - 1 + uniqueSlidesLarge.length) % uniqueSlidesLarge.length;
+        showUniqueSlidesLarge();
+    }
+
+    uniqueNextBtnLarge.addEventListener('click', nextUniqueSlideLarge);
+    uniquePrevBtnLarge.addEventListener('click', prevUniqueSlideLarge);
+
+    showUniqueSlidesLarge();
+});
+    </script>
+    </section>
 
 <section id="testimonios">
     <div class="content">
-        <h2>Testimonios anónimos</h2>
-        <p>Comparte tu experiencia o lee testimonios de otros jóvenes sobre el embarazo adolescente y la educación sexual. Tu historia puede ayudar a otros a tomar decisiones informadas.</p>
-        <form>
-            <label for="testimonio">Tu testimonio:</label><br>
-            <textarea id="testimonio" name="testimonio" rows="4" cols="50" placeholder="Escribe tu testimonio aquí..."></textarea><br><br>
-            <input type="submit" value="Enviar">
-        </form>
+        <h2>Testimonios</h2>
+        <div class="testimony-container">
+            <div class="testimony">
+                <h3>María</h3>
+                <p>"María tenía 16 años cuando descubrió que estaba embarazada. María era una estudiante de secundaria con grandes sueños de convertirse en médica. Su vida cambió drásticamente cuando descubrió que estaba embarazada. Al principio, María estaba asustada y no sabía qué hacer. No tenía el apoyo de sus padres, quienes estaban enojados y decepcionados al enterarse de la noticia.<br><br> Durante su embarazo, María enfrentó muchos desafíos. Tuvo que dejar la escuela porque le resultaba difícil concentrarse y asistir a las clases con regularidad debido a las náuseas y el cansancio. Además, sus amigos comenzaron a alejarse de ella, y se sintió sola y aislada. María dio a luz a una niña sana, pero la vida se volvió aún más difícil. Tuvo que buscar trabajos de medio tiempo para mantener a su hija, ya que el padre de la bebé no estaba presente. La falta de una educación completa limitó sus oportunidades laborales, y se encontró atrapada en trabajos mal pagados y sin futuro. La salud de María también sufrió. No recibió el cuidado prenatal adecuado, lo que resultó en complicaciones durante el parto. Después de dar a luz, no tenía tiempo para cuidar su propia salud debido a las demandas de cuidar a su hija."</p>
+            </div>
+            <div class="testimony">
+                <h3>Ana</h3>
+                <p>"Ana quedó embarazada a los 15 años. Ana era una joven alegre y extrovertida, con muchos amigos y un futuro prometedor en el atletismo. Sin embargo, su vida dio un giro inesperado cuando quedó embarazada a los 15 años. Ana no estaba preparada para ser madre y tenía miedo de cómo esto afectaría su vida y sus sueños. Sus padres la apoyaron, pero la situación era difícil. Ana tuvo que dejar el equipo de atletismo y sus estudios fueron interrumpidos. A pesar del apoyo de su familia, Ana se sintió abrumada y deprimida. La presión de ser una madre adolescente y la pérdida de sus sueños deportivos le pesaban mucho. Después de dar a luz, Ana intentó regresar a la escuela, pero el equilibrio entre el cuidado de su bebé y los estudios era casi imposible. La falta de sueño y el estrés constante afectaron su rendimiento académico, y eventualmente, tuvo que abandonar la escuela por completo. Ana también enfrentó problemas de salud mental. La depresión posparto y la ansiedad la afectaron gravemente, y le resultó difícil buscar ayuda debido al estigma asociado con los problemas de salud mental. Con el tiempo, Ana encontró apoyo en un grupo de madres adolescentes, lo que le ayudó a sobrellevar la situación, pero sus sueños de ser atleta profesional nunca se realizaron."</p>
+            </div>
+            <div class="testimony">
+                <h3>Laura</h3>
+                <p>"Laura, de 17 años, quedó embarazada justo antes de graduarse. Laura era una estudiante sobresaliente con una beca asegurada para la universidad. Tenía planes de estudiar derecho y convertirse en abogada. Sin embargo, quedó embarazada justo antes de graduarse de la secundaria. Laura y su novio estaban sorprendidos y asustados, pero decidieron tener al bebé. A pesar de sus esfuerzos por continuar con sus estudios, Laura tuvo que renunciar a su beca universitaria y sus sueños de convertirse en abogada. El estrés del embarazo y la falta de apoyo financiero hicieron que fuera imposible para ella seguir adelante con sus planes educativos. Laura trabajaba en trabajos de medio tiempo para ahorrar dinero, pero los costos del cuidado del bebé y los gastos médicos eran abrumadores. La falta de una educación universitaria limitó sus oportunidades de carrera, y se encontró atrapada en trabajos mal pagados. Además, Laura experimentó problemas de salud durante el embarazo debido a la falta de acceso a un buen cuidado prenatal. Esto resultó en complicaciones durante el parto y una recuperación prolongada."</p>
+            </div>
+            <div class="testimony">
+                <h3>Valeria</h3>
+                <p>"Valeria quedó embarazada a los 16 años. Valeria era una joven talentosa en el arte, con sueños de estudiar diseño gráfico en una prestigiosa universidad. Sin embargo, a los 16 años, descubrió que estaba embarazada. El padre del bebé, un compañero de clase, no estaba dispuesto a asumir la responsabilidad, dejándola sola con la noticia. El embarazo de Valeria fue complicado. Vivía con su madre, quien trabajaba largas horas para mantener a la familia. Sin el apoyo del padre de su hijo y con recursos limitados, Valeria se vio obligada a abandonar la escuela. Aunque su madre intentaba ayudarla, la situación financiera era difícil y los costos del embarazo eran abrumadores. Valeria dio a luz a un niño prematuro, lo que implicó gastos médicos adicionales y tiempo en el hospital. La presión de cuidar a un bebé prematuro afectó su salud mental y física. Su sueño de estudiar diseño gráfico quedó en suspenso, y Valeria comenzó a trabajar desde casa haciendo trabajos de arte freelance para poder mantenerse y cuidar a su hijo. A pesar de los desafíos, Valeria nunca dejó de lado su pasión por el arte. Con el tiempo, se convirtió en una artista autodidacta reconocida en su comunidad, pero su camino fue arduo y lleno de sacrificios."</p>
+            </div>
+            <div class="testimony">
+                <h3>Claudia</h3>
+                <p>"Claudia quedó embarazada a los 14 años. Claudia era una niña tímida y reservada, que sobresalía en matemáticas y ciencias. Su vida cambió dramáticamente cuando, a los 14 años, quedó embarazada. La noticia conmocionó a su familia y amigos, y Claudia se encontró en una situación muy difícil. A su corta edad, Claudia no entendía completamente las implicaciones del embarazo. Su familia estaba consternada, y aunque la apoyaron, el ambiente en casa era tenso. Claudia dejó la escuela secundaria, sintiéndose abrumada por las responsabilidades que se avecinaban. Durante el embarazo, Claudia enfrentó numerosos problemas de salud debido a su juventud. Su cuerpo no estaba preparado para los rigores del embarazo, y sufrió de anemia y desnutrición. Los médicos monitorearon su embarazo de cerca, pero Claudia se sentía constantemente cansada y estresada. Después de dar a luz a una niña, Claudia se enfrentó a la dura realidad de ser madre adolescente. La falta de educación y de habilidades laborales limitó sus oportunidades. Con el tiempo, encontró trabajo en una tienda local, pero los bajos salarios no eran suficientes para proporcionar una vida cómoda para ella y su hija. A pesar de todo, Claudia nunca perdió su amor por las matemáticas y las ciencias. Se inscribió en un programa de educación para adultos y, con mucho esfuerzo, obtuvo su diploma de secundaria. Aunque su sueño de convertirse en ingeniera parecía distante, Claudia se comprometió a darle a su hija una mejor vida y a seguir luchando por sus propios sueños."</p>
+            </div>
+        </div>
     </div>
 </section>
-
 <section id="enlaces-interes">
     <div class="content">
         <h2>Enlaces de interés</h2>
-        <p>A continuación, te proporcionamos una lista de enlaces útiles donde puedes encontrar más información sobre la salud sexual y reproductiva, y el embarazo adolescente:</p>
         <ul>
-            <li><a href="https://www.unicef.org/es/temas/educacion-sexual" target="_blank">UNICEF - Educación sexual en adolescentes</a></li>
             <li><a href="https://www.who.int/es/news-room/fact-sheets/detail/adolescent-pregnancy" target="_blank">OMS - Embarazo adolescente</a></li>
-            <li><a href="https://www.gob.mx/salud" target="_blank">Ministerio de Salud</a></li>
-            <li><a href="https://www.plannedparenthood.org/es" target="_blank">Planned Parenthood - Salud sexual y reproductiva</a></li>
-            <li><a href="https://www.sexualityandu.ca/" target="_blank">Sexuality and U - Información sobre sexualidad</a></li>
+            <li><a href="https://www.unfpa.org/es/temas/embarazo-adolescente" target="_blank">UNFPA - Embarazo adolescente</a></li>
+            <li><a href="https://www.unicef.org/peru/embarazo-adolescente" target="_blank">UNICEF - Embarazo adolescente en Perú</a></li>
+            <li><a href="https://www.minsa.gob.pe/portada/EstrategiaSanitaria/Estrategias/Estrategia%20Sanitaria%20Nacional%20de%20Prevenci%C3%B3n%20y%20Control%20de%20Embarazo%20Adolescente%20E%20Incendencia%20de%20la%20Transmisi%C3%B3n%20Vertical%20del%20VIH%20y%20S%C3%ADfilis" target="_blank">MINSA - Estrategia sanitaria de prevención de embarazo adolescente</a></li>
         </ul>
     </div>
 </section>
-
+<section id="comentarios">
+<div class="content">
+    <h3>Deja tu opinión para mejorar</h3><!-- Inicio del Código de BawkBox --><script data-sil-id="668990dd4e6f9b00133072ae">var loadWidget = function() { var d = document, w = window, l = window.location,p = l.protocol == "file:" ? "http://" : "//"; if (!w.WS) w.WS = {}; c = w.WS; var m=function(t, o){ var e = d.getElementsByTagName("script"); e=e[e.length-1]; var n = d.createElement(t); if (t=="script") {n.async=true;} for (k in o) n[k] = o[k]; e.parentNode.insertBefore(n, e)}; m("script", { src: p + "bawkbox.com/widget/star-rating/668990dd4e6f9b00133072ae?page=" +encodeURIComponent(l+''), type: 'text/javascript' }); c.load_net = m; }; if(window.Squarespace){ document.addEventListener('DOMContentLoaded', loadWidget); setTimeOut(function(){ document.addEventListener('DOMContentLoaded', loadWidget); }, 3000) } else { loadWidget() } </script><script type="application/ld+json" src="/widget/star-rating/668990dd4e6f9b00133072ae/microdata"></script><div class="sil-widget-star-rating sil-widget" id="sil-widget-668990dd4e6f9b00133072ae"><a href="//bawkbox.com/install/star-rating">Opiniones de los Clientes</a></div><p><!-- Fin del Código de BawkBox -->
+    <!-- Aquí puedes agregar más contenido según sea necesario -->
+</div>
+</section>
 <footer>
-    <p>Tacna, Perú 2024</p>
+    <p>&copy; 2024 Aprende a cuidarte. Todos los derechos reservados.</p>
 </footer>
 
-<button id="back-to-top">↑ Subir</button>
+<button onclick="topFunction()" id="back-to-top" title="Ir arriba">Ir arriba</button>
 
 <script>
-    // Smooth scroll for navigation links
-    document.querySelectorAll('nav a').forEach(anchor => {
+    function toggleAnswer(index) {
+        var answer = document.getElementById("answer" + index);
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+        } else {
+            answer.style.display = "block";
+        }
+    }
+
+    // Smooth scrolling effect for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
 
@@ -334,30 +909,29 @@
         });
     });
 
-    // Scroll to top button
-    document.getElementById('back-to-top').addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+    // Back to top button functionality
+    var mybutton = document.getElementById("back-to-top");
 
-    // FAQ toggle
-    document.query
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
 </script>
-<script>
-    // FAQ toggle
-    document.querySelectorAll('.faq-question').forEach(question => {
-        question.addEventListener('click', function() {
-            const answer = this.nextElementSibling;
-            if (answer.style.display === 'block' || answer.style.display === '') {
-                answer.style.display = 'none';
-            } else {
-                answer.style.display = 'block';
-            }
-        });
-    });
-</script>
+
+</body>
+</html>
 
 
 
