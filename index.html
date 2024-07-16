@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprende a cuidarte</title>
+    <title>Aprendo a cuidarme</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
 
@@ -217,12 +217,38 @@
 
         /* Responsive styles */
         @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.2em;
+            }
+
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                padding: 10px;
+                margin-right: 20px;
+            }
+
+            .menu-toggle div {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                margin: 5px 0;
+                transition: 0.4s;
+            }
+
             nav {
                 flex-direction: column;
+                display: none;
+                background: linear-gradient(135deg, #ff616f 0%, #ff9a9e 50%, #fad0c4 100%);
             }
 
             nav a {
                 padding: 10px;
+                text-align: center;
+            }
+
+            nav.active {
+                display: flex;
             }
 
             .slide p {
@@ -237,11 +263,13 @@
                 grid-template-columns: 1fr;
             }
         }
-      .content {
+
+        .content {
             max-width: 800px;
             margin: auto;
             padding: 20px;
         }
+
         .slider {
             position: relative;
             width: 100%;
@@ -252,10 +280,12 @@
             border-radius: 10px;
             margin-top: 20px;
         }
+
         .slides {
             display: flex;
             transition: transform 0.5s ease-in-out;
         }
+
         .slide {
             min-width: 100%;
             box-sizing: border-box;
@@ -263,16 +293,19 @@
             display: flex;
             align-items: center;
         }
+
         .slide img {
             max-width: 40%;
             max-height: 150px;
             margin-right: 20px;
             border-radius: 10px;
         }
+
         .buttons {
             text-align: center;
             margin-top: 20px;
         }
+
         .buttons button {
             padding: 10px 20px;
             margin: 5px;
@@ -283,12 +316,12 @@
             background-color: #007BFF;
             color: white;
         }
+
         .buttons button#prevBtn {
             display: none; /* Ocultar el botón "Anterior" inicialmente */
         }
 
         /* Estilos específicos para la sección "quienes-somos" */
-        
         #quienes-somos h2 {
             color: #007BFF;
             font-size: 24px;
@@ -300,96 +333,93 @@
             line-height: 1.6;
             margin-bottom: 15px;
         }
-        /*yo decidí esperar*/
-.unique-slider-container {
-    position: relative;
-    overflow: hidden;
-    width: 40%; /* Reducing the width to 80% to make images smaller */
-    margin: 0 auto;
-}
 
-.unique-slider {
-    display: flex;
-    transition: transform 0.5s ease;
-}
+        .unique-slider-container {
+            position: relative;
+            overflow: hidden;
+            width: 40%; /* Reducing the width to 80% to make images smaller */
+            margin: 0 auto;
+        }
 
-.unique-slide {
-    min-width: 100%;
-    box-sizing: border-box;
-}
+        .unique-slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
 
-.unique-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+        .unique-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
 
-.unique-prev-btn, .unique-next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 1;
-}
+        .unique-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
-.unique-prev-btn {
-    left: 10px;
-}
+        .unique-prev-btn, .unique-next-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            z-index: 1;
+        }
 
-.unique-next-btn {
-    right: 10px;
-}
+        .unique-prev-btn {
+            left: 10px;
+        }
 
-        /*yo decidí esperar*/
-/* slide grande*/
-/* Slider con imágenes grandes */
-.unique-slider-container-large {
-    position: relative;
-    overflow: hidden;
-    width: 40%; /* Mantener el ancho al 100% para mantener el tamaño original de las imágenes */
-    margin: 0 auto;
-}
+        .unique-next-btn {
+            right: 10px;
+        }
 
-.unique-slider-large {
-    display: flex;
-    transition: transform 0.5s ease;
-}
+        /* Slider con imágenes grandes */
+        .unique-slider-container-large {
+            position: relative;
+            overflow: hidden;
+            width: 40%; /* Mantener el ancho al 100% para mantener el tamaño original de las imágenes */
+            margin: 0 auto;
+        }
 
-.unique-slide-large {
-    min-width: 100%;
-    box-sizing: border-box;
-}
+        .unique-slider-large {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
 
-.unique-slide-large img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+        .unique-slide-large {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
 
-.unique-prev-btn-large, .unique-next-btn-large {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 1;
-}
+        .unique-slide-large img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
-.unique-prev-btn-large {
-    left: 10px;
-}
+        .unique-prev-btn-large, .unique-next-btn-large {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            z-index: 1;
+        }
 
-.unique-next-btn-large {
-    right: 10px;
-}
-/*slide grande */
+        .unique-prev-btn-large {
+            left: 10px;
+        }
+
+        .unique-next-btn-large {
+            right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -397,9 +427,14 @@
 <header>
     <img src="https://i.ibb.co/sWpBww2/logo.png" alt="Logo" class="logo" width="150">
     <h1>Aprende a cuidarte</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 </header>
 
-<nav>
+<nav id="menu">
     <a href="#inicio">Inicio</a>
     <a href="#quienes-somos">¿Quiénes somos?</a>
     <a href="#preguntas-respuestas">Preguntas y respuestas</a>
@@ -410,6 +445,12 @@
     <a href="#comentarios">Comentarios</a>
 </nav>
 
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+    }
+</script>
 <section id="inicio">
     <div class="content">
         <h2>Inicio</h2>
